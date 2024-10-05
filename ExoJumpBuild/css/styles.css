@@ -8,6 +8,8 @@
 
 
 
+
+
 #AutorRotate {
     font-size: 16px;
     cursor: pointer;
@@ -30,87 +32,149 @@
 
 #globeViz{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
 }
-body {
-    font-family: Arial, sans-serif; /* Cambia la fuente a Arial */
-}
 
-.nav {
-    position: absolute;
-    top: 145px;
-    left: 20px;
-    z-index: 15;
-    background-color: rgba(255, 255, 255, 2%); /* Fondo blanco con 80% de transparencia */
-    padding: 10px;
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow:  0 0px 24px rgb(255, 255, 255); /* Sombra ligera */
-    width: 250px;
-    z-index: 10; /* Ajusta el tamaño según lo necesites */
-}
 
-.menu-title {
+.botones{
+    display: block;
     text-align: center;
-    font-size: 20px;
-    margin-bottom: 15px; /* Espacio entre el título y la lista */
-    color: #ffffff;
-}
-
-.list {
-    list-style-type: none; /* Eliminar los puntos de la lista */
-    padding: 0; /* Eliminar el padding de la lista */
-}
-
-.list__show {
-    background-color: rgba(0, 0, 0, 0.027); /* Aplicando transparencia también a los submenús */
-    overflow: hidden;
-    height: 0; /* Iniciar en cerrado */
-    transition: height 0.3s ease; /* Transición suave al abrir/cerrar */
-}
-
-.list__button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    background-color: #ffffff;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    border: 0;
+    padding: 0.125rem 0.625rem;
+    border-radius: 30px;
+    width: 100px;
+    margin-top: 0.25rem;
     cursor: pointer;
 }
 
-.list__img {
-    width: 20px;  /* Ajusta el tamaño de la imagen aquí */
-    height: 20px; /* Ajusta el tamaño de la imagen aquí */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+.botones-grandes{
+    padding: 0rem, .1rem;
+    width: 150px;
 }
 
 
-.nav__link {
+body{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#main-container{
+    display: flex;
+    width: 100%;
+}
+
+.scene-container{
+    height: auto;
+}
+
+
+
+
+#nav{
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 100vh;
+}
+
+.nav{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 15;
+    background-color: rgba(86, 86, 86, 0.356);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-title{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.list__show{
+    flex-grow: 1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    list-style-type: none;
+}
+
+.list__button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+list__img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.nav__link{
     text-decoration: none;
     color: #ffffff;
-    font-weight: bold;
-    font-size: 16px;
-    flex-grow: 1; /* Para que el enlace ocupe el espacio disponible */
+    flex-grow: 1;
 }
 
-.list__arrow {
+.list__button{
+    color: #ffffff;
     transition: transform 0.3s ease;
+    margin-right: 5px;
 }
 
-.arrow .list__arrow {
-    transform: rotate(90deg); /* Rotación de la flecha cuando se expande */
+.arrow .list__arrow{
+    transform: rotate(90deg);
 }
 
-.list__inside {
+.list__inside{
     padding: 10px;
-    list-style-type: none; /* Eliminar los puntos de la lista dentro de los submenús */
+    list-style-type: none;
 }
 
-.nav__link--inside {
+.nav__link--inside{
     font-size: 14px;
 }
+
 
 
 .intro_diseno{
