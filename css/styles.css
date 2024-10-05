@@ -1,0 +1,16 @@
+.botones{
+    display: block;
+    text-align: center;
+    background-color: #ffffff;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    border: 0;
+    padding: 0.125rem 0.625rem;
+    border-radius: 30px;
+    width: 100px;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
