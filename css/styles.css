@@ -28,3 +28,59 @@ body{
     display: flex;
     height: 100vh;
 }
+
+h1{
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+#main-container{
+    display: flex;
+    width: 100%;
+}
+
+.scene-container{
+    height: auto;
+}
+
+#GoBack{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 10;
+}
+
+#RotacionExoplaneta{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+}
+
+#globeViz{
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+#nav{
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 100vh;
+}
+
+.nav{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 15;
+    background-color: rgba(86, 86, 86, 0.356);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
