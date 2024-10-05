@@ -139,32 +139,19 @@ function init() {
             index++;
             setTimeout(typeText, typingSpeed); // Velocidad de escritura (en milisegundos)
         }
+        else {
+            // Llama a la función `showContinueText` cuando el texto de bienvenida haya terminado
+            showContinueText();
+        }
     }
 
+   
+  
     function showContinueText() {
         const continueText = document.createElement("div");
-        continueText.innerHTML = "(click to continue)";
+        continueText.innerHTML = "Ready To Jump?";
         continueText.style.position = "absolute";
-        continueText.style.top = "calc(50% + 30px)"; // Ajusta la posición según sea necesario
-        continueText.style.left = "50%";
-        continueText.style.transform = "translate(-50%, 0)";
-        continueText.style.color = "#FFFFFF";
-        continueText.style.fontFamily = "VCR OSD Mono";
-        continueText.style.fontSize = "24px";
-        continueText.style.textAlign = "center";
-        continueText.style.pointerEvents = "none"; // Evita que los eventos del mouse afecten al texto
-        document.body.appendChild(continueText);
-    }
-    // Llama a la función cuando la página está completamente cargada
-    window.addEventListener("load", () => {
-        typeText()
-        showContinueText();
-    });
-    function showContinueText() {
-        const continueText = document.createElement("div");
-        continueText.innerHTML = "(click to continue)";
-        continueText.style.position = "absolute";
-        continueText.style.top = "calc(50% + 320px)"; // Ajusta la posición según sea necesario
+        continueText.style.top = "calc(50% + 230px)"; // Ajusta la posición según sea necesario
         continueText.style.left = "50%";
         continueText.style.transform = "translate(-50%, 0)";
         continueText.style.color = "#FFFFFF";
@@ -172,9 +159,13 @@ function init() {
         continueText.style.fontSize = "24px";
         continueText.style.pointerEvents = "none"; // Evita que los eventos del mouse afecten al texto
         document.body.appendChild(continueText);
-        continueText.style.opacity = ".5";
+        continueText.style.opacity = "1";
     }
     
+      // Llama a la función cuando la página está completamente cargada
+      window.addEventListener("load", () => {
+        typeText();
+    });
 
     // Botón que redirige al hacer clic
     document.body.addEventListener('click', function() {

@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <script src="/ExoJumpBuild/js/music.js"></script>
     <div id="total">
 
@@ -51,7 +52,7 @@
                 </div>
                 <ul class="list__show">
                     <li class="list__inside">
-                        <button class="botones botones grandes" id="OwnExoplanet" onclick=" window.location.href = 'paint.html' ">Make Your Own Exoplanet</button>
+                        <button class="botones botones grandes" id="OwnExoplanet" onclick=" window.location.href = 'paint.html' ">Make Your Exoplanet</button>
                     </li>
                     
                     <li class="list__inside">
@@ -59,23 +60,7 @@
                     </li>
                 </ul>
             </li>
-    
-            <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    <a href="#" class="nav__link"> <i class="fa-solid fa-satellite"></i> Estadísticas</a>
-                    <i class="fa-solid fa-chevron-right list__arrow"></i>
-                </div>
-    
-                <ul class="list__show">
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Gráficas</a>
-                    </li>
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Datos detallados</a>
-                    </li>
-                </ul>
-            </li>
-    
+
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
                     <a href="#" class="nav__link"><i class="fa-solid fa-meteor"></i> Parameters</a>
@@ -84,12 +69,14 @@
     
                 <ul class="list__show">
                     <li class="WASP-6b">
-                        <input type="range" id="speedSlider" min="-2" max="2" step="0.05" value="0.35">
-                        <label for="speedSlider">Rotation Speed</label>
+                        <button id="AutoRotate" class="botones">Rotation</button>
                     </li>
                     <li class="WASP-6b">
-                        <button id="AutoRotate">Rotation</button>
+                        <input type="range" id="speedSlider" min="-2" max="2" step="0.05" value="0.35">
+                        
+                        <label class="rotacion" for="speedSlider">Rotation Speed</label>
                     </li>
+                    
                 </ul>
             </li>
     

@@ -1,5 +1,11 @@
 import * as THREE from '//unpkg.com/three/build/three.module.js';
 
+
+window.addEventListener('resize', () => {
+  const globeElement = document.getElementById('total'); //cambiar main container a 'total'
+  world.width(globeElement.clientWidth).height(globeElement.clientHeight)
+})
+
 const Bases = [
   '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-6b.jpg',
   '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-31b.jpg',
