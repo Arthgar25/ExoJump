@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'NASA';
-    src: url('/ExoPlanetas Build/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
+    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
     font-weight: normal;
     font-style: normal;
   }
@@ -45,10 +45,10 @@ body {
     top: 145px;
     left: 20px;
     z-index: 15;
-    background-color: rgba(86, 86, 86, 0.356); /* Fondo blanco con 80% de transparencia */
-    padding: 25px;
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    background-color: rgba(255, 255, 255, 2%); /* Fondo blanco con 80% de transparencia */
+    padding: 10px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow:  0 0px 24px rgb(255, 255, 255); /* Sombra ligera */
     width: 250px;
     z-index: 10; /* Ajusta el tamaño según lo necesites */
 }
@@ -110,4 +110,45 @@ body {
 
 .nav__link--inside {
     font-size: 14px;
+}
+
+
+.intro_diseno{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    background-color: rgba(255, 255, 255, 2%); /* Fondo blanco con 80% de transparencia */
+    padding: 0;
+    border-radius: 0px; /* Bordes redondeados */
+    box-shadow:  0 0px 24px rgb(255, 255, 255); /* Sombra ligera */
+    width: 300px;
+    height: 100vh;
+    z-index: 10; /* Ajusta el tamaño según lo necesites */
+    overflow: auto;
+}
+.col_inter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* Centrar horizontalmente solo el título */
+    padding: 0px;
+    font-size: 18px;
+    margin-bottom: 2px;
+    color: #ffffffcc;
+}
+
+.informacion {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0px;
+    font-size: 15px;
+    width: 80%; /* Aumenta el ancho del contenedor */
+    max-width: 400px; /* Limitar el ancho máximo */
+    line-height: 1.8; /* Aumentar el espacio entre líneas */
+    margin-bottom: 100px;
+    color: #ffffffcc;
 }

@@ -25,15 +25,15 @@ const bumps = [
 ];
 
 const Nubes = [
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-6b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-31b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hd189733b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hat-p-12b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-17b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-19b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hat-p-1b.png',
-  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hd209458b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-6b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-31b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hd189733b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hat-p-12b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-17b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-19b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hat-p-1b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hd209458b.png',
 ];
 
 const Nubes2 = [
@@ -80,8 +80,8 @@ var clouds, clouds2;
 const cloudGroup = new THREE.Group();
 
  const world = Globe()
-      .globeImageUrl(Bases[selector])
-      .bumpImageUrl(bumps[selector])
+      .globeImageUrl('https://i.ibb.co/h94JBXy/saturn3-ljge5g.jpg')
+      .bumpImageUrl(null)
       .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
       (document.getElementById('globeViz'));
 
@@ -182,3 +182,56 @@ document.getElementById('speedSlider').addEventListener('input', function() {
   world.controls().autoRotateSpeed = rotationSpeed; // Actualiza la velocidad de rotación
   console.log("Velocidad de rotación:", rotationSpeed); // Muestra la velocidad en la consola
 });
+
+
+// Selecciona el elemento del título
+const planetTitle = document.getElementById('planet-title');
+
+// Función para actualizar el título
+function updatePlanetTitle(planetName) {
+    planetTitle.textContent = planetName; // Cambia el texto del título
+}
+
+// Añade eventos a los botones de planetas
+document.getElementById('WASP-6b').addEventListener('click', () => updatePlanetTitle('WASP-6b'));
+document.getElementById('WASP-31b').addEventListener('click', () => updatePlanetTitle('WASP-31b'));
+document.getElementById('WASP-39b').addEventListener('click', () => updatePlanetTitle('WASP-39b'));
+document.getElementById('HD189733b').addEventListener('click', () => updatePlanetTitle('HD189733b'));
+document.getElementById('HAT-P-12b').addEventListener('click', () => updatePlanetTitle('HAT-P-12b'));
+document.getElementById('WASP-17b').addEventListener('click', () => updatePlanetTitle('WASP-17b'));
+document.getElementById('WASP-19b').addEventListener('click', () => updatePlanetTitle('WASP-19b'));
+document.getElementById('HAT-P-1b').addEventListener('click', () => updatePlanetTitle('HAT-P-1b'));
+document.getElementById('HD209458b').addEventListener('click', () => updatePlanetTitle('HD209458b'));
+
+
+// Array de descripciones de los planetas
+const planetDescriptions = [
+  'WASP-6b: Un planeta caliente con una atmósfera densa y nubes dispersas de partículas pequeñas.',
+  'WASP-31b: Planeta gigante gaseoso con nubes brillantes que reflejan mucha luz.',
+  'WASP-39b: Un exoplaneta con una atmósfera brumosa y azulada.',
+  'HD189733b: Un planeta con tormentas intensas y nubes grises densas.',
+  'HAT-P-12b: Tiene una atmósfera densa y oscura, lo que lo hace muy difícil de observar directamente.',
+  'WASP-17b: Uno de los exoplanetas más grandes, con una atmósfera tenue y clara.',
+  'WASP-19b: Planeta caliente con una atmósfera turbulenta y cálida.',
+  'HAT-P-1b: Tiene una atmósfera fría y difusa que dispersa la luz de forma tenue.',
+  'HD209458b: Uno de los primeros exoplanetas descubiertos, con una atmósfera clara y azulada.'
+];
+
+// Selecciona el elemento para la descripción
+const planetDescriptionElement = document.querySelector('.informacion p');
+
+// Función para actualizar la descripción del planeta
+function updatePlanetDescription(description) {
+  planetDescriptionElement.textContent = description; // Cambia el texto de la descripción
+}
+
+// Añade eventos a los botones de planetas para cambiar la descripción
+document.getElementById('WASP-6b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[0]));
+document.getElementById('WASP-31b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[1]));
+document.getElementById('WASP-39b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[2]));
+document.getElementById('HD189733b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[3]));
+document.getElementById('HAT-P-12b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[4]));
+document.getElementById('WASP-17b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[5]));
+document.getElementById('WASP-19b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[6]));
+document.getElementById('HAT-P-1b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[7]));
+document.getElementById('HD209458b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[8]));
