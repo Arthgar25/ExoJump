@@ -206,7 +206,7 @@ document.getElementById('HD209458b').addEventListener('click', () => updatePlane
 
 // Array de descripciones de los planetas
 const planetDescriptions = [
-  'WASP-6b: Un planeta caliente con una atmósfera densa y nubes dispersas de partículas pequeñas.',
+  'WASP-6b: Un planeta gay caliente con una atmósfera densa y nubes dispersas de partículas pequeñas.',
   'WASP-31b: Planeta gigante gaseoso con nubes brillantes que reflejan mucha luz.',
   'WASP-39b: Un exoplaneta con una atmósfera brumosa y azulada.',
   'HD189733b: Un planeta con tormentas intensas y nubes grises densas.',
