@@ -1,4 +1,5 @@
 // Mostrar la pantalla de carga después de 1.5 segundos
+
 setTimeout(() => {
     document.querySelector('.fondo img').classList.add('fondo-desvanecer');
   
