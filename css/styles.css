@@ -14,3 +14,17 @@
     margin-top: 0.25rem;
     cursor: pointer;
 }
+
+.botones-grandes{
+    padding: 0rem, .1rem;
+    width: 150px;
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
