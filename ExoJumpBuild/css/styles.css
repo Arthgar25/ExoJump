@@ -100,7 +100,7 @@ h1{
     top: 0px;
     left: 0px;
     z-index: 15;
-    background-color: rgba(86, 86, 86, 0.356);
+    background-color: rgba(86, 86, 86, 2%);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 250px;
@@ -182,10 +182,10 @@ list__img{
     top: 0;
     right: 0;
     z-index: 15;
-    background-color: rgba(255, 255, 255, 2%); /* Fondo blanco con 80% de transparencia */
+    background-color: rgba(255, 255, 255, 0); /* Fondo blanco con 80% de transparencia */
     padding: 0;
     border-radius: 0px; /* Bordes redondeados */
-    box-shadow:  0 0px 24px rgb(255, 255, 255); /* Sombra ligera */
+    /* box-shadow:  0 0px 24px rgb(255, 255, 255);  */
     width: 300px;
     height: 100vh;
     z-index: 10; /* Ajusta el tamaño según lo necesites */
@@ -194,6 +194,7 @@ list__img{
 .col_inter {
     position: absolute;
     left: 50%;
+    width: 80%; /* Aumenta el ancho del contenedor */
     transform: translateX(-50%);
     text-align: center; /* Centrar horizontalmente solo el título */
     padding: 0px;

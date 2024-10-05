@@ -1,4 +1,7 @@
-const audio = new Audio('/ExoJumpBuild/assets/MusicaFondo.mp3'); // Asegúrate de usar la ruta correcta
+const audio = new Audio();
+audio.src = '/ExoJumpBuild/assets/MusicaFondo.mp3';
+audio.type = 'audio/mpeg'; // Especifica que es de tipo MP3
+
 audio.loop = true;
 audio.volume = 0.5;
 
