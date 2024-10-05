@@ -1,15 +1,15 @@
 import * as THREE from '//unpkg.com/three/build/three.module.js';
 
 const Bases = [
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-wasp-6b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-wasp-31b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-wasp-39b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-hd189733b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-hat-p-12b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-wasp-17b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-wasp-19b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-hat-p-1b.jpg',
-  '/ExoPlanetas Build/images/ExoMaterials/Bases/base-hd209458b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-6b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-31b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-39b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-hd189733b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-hat-p-12b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-17b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-wasp-19b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-hat-p-1b.jpg',
+  '/ExoJumpBuild/images/ExoMaterials/Bases/base-hd209458b.jpg',
 ];
 
 const bumps = [
@@ -25,27 +25,27 @@ const bumps = [
 ];
 
 const Nubes = [
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-wasp-6b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-wasp-31b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-hd189733b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-hat-p-12b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-wasp-17b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-wasp-19b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-hat-p-1b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-hd209458b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-6b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-31b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hd189733b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hat-p-12b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-17b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-wasp-19b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hat-p-1b.png',
+  '/ExoJumpBuild Build/images/ExoMaterials/Clouds/detail1-hd209458b.png',
 ];
 
 const Nubes2 = [
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail2-wasp-6b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail2-wasp-31b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail2-hd189733b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail2-hat-p-12b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail2-wasp-17b.png',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail2-wasp-19b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-6b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-31b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-hd189733b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-hat-p-12b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-17b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-19b.png',
   'null',
-  '/ExoPlanetas Build/images/ExoMaterials/Clouds/detail1-hd209458b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hd209458b.png',
 ];
 
 const Velocidades = [
