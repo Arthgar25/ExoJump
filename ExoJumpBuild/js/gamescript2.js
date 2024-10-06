@@ -424,7 +424,10 @@ function PlayerInfo() {
     currentLevel = GameLevel[currentLevelIndex];
     score = 0;
   }
+  if (currentLevelIndex==2) {  
+    window.location.href = "gamevictory.html";
 
+  }
   ctx.font = "40px Verdana"; 
   ctx.fillText("Level " + (currentLevelIndex + 1), canvas.width - 200, 70);
 }
