@@ -32,13 +32,14 @@ let arr = [
 ]
 const resources = preloadImages(arr);
 
+
 var score = 0;
 //Game Lavel Design
 const GameLevel = [
   {
     label: "Lavel 1",
-    enemySpeed: 2,
-    enemyPerFream: 50,
+    enemySpeed: 4,
+    enemyPerFream: 20,
     copter: "copter1",
     bg: "bg1",
     mainDefSpeed: 5,
@@ -46,7 +47,7 @@ const GameLevel = [
   {
     label: "Lavel 2",
     enemySpeed: 7,
-    enemyPerFream: 30,
+    enemyPerFream: 15,
     copter: "copter2",
     bg: "bg2",
     mainDefSpeed: 7,
@@ -430,15 +431,17 @@ function PlayerInfo() {
 
   ctx.font = "60px Verdana";
   // Create gradient
-  var scoretxt= "Score";
   // Fill with gradient
   ctx.fillStyle = 'white';
   ctx.fillText(score, 10, 70);
-  if (score > 50) {
+  if (score > 25) {
     currentLevelIndex++;
     currentLevel = GameLevel[currentLevelIndex];
     score = 0;
   }
+
+  ctx.font = "40px Verdana"; // Ajusta el tamaño de fuente según sea necesario
+  ctx.fillText("Level " + (currentLevelIndex + 1), canvas.width - 200, 70);
 }
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);

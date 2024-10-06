@@ -113,6 +113,15 @@ const cloudGroup = new THREE.Group();
       cloudGroup.add(atmosphereMesh);
     }
 
+
+
+
+
+
+
+
+
+    
 function loadClouds() {
   cloudGroup.clear();
 
