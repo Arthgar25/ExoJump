@@ -212,8 +212,8 @@ document.getElementById('HD209458b').addEventListener('click', () => updatePlane
 
 // Array de descripciones de los planetas
 const planetDescriptions = [
-  'WASP-6b: Un planeta gay caliente con una atmósfera densa y nubes dispersas de partículas pequeñas.',
-  'WASP-31b: Planeta gigante gaseoso con nubes brillantes que reflejan mucha luz.',
+  "A hot planet with a dense atmosphere and scattered clouds of small particles. It has almost one-third of Jupiter's mass, but its radius is almost the same.",
+  'A giant gas planet with bright clouds that reflect a lot of light. It is larger than our sun.',
   'WASP-39b: Un exoplaneta con una atmósfera brumosa y azulada.',
   'HD189733b: Un planeta con tormentas intensas y nubes grises densas.',
   'HAT-P-12b: Tiene una atmósfera densa y oscura, lo que lo hace muy difícil de observar directamente.',
