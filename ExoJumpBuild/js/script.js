@@ -207,6 +207,17 @@ function updatePlanetTitle(planetName) {
     planetTitle.textContent = planetName; // Cambia el texto del título
 }
 
+//Escondiendo el panel de detalles para cada planeta y mostrandolo despues de elegir un planeta
+const button = document.getElementById('botones-planetas'); //Referencia al boton que activara la funcionalidad
+const details = document.getElementById('item-details') //Referencia al elemento a mostrar
+
+button.addEventListener('click', () => {
+  if(details.style.display === 'none' || details.style.display === ''){
+    details.style.display = 'grid';
+  }
+})
+
+
 // Añade eventos a los botones de planetas
 document.getElementById('WASP-6b').addEventListener('click', () => updatePlanetTitle('WASP-6b'));
 document.getElementById('WASP-31b').addEventListener('click', () => updatePlanetTitle('WASP-31b'));

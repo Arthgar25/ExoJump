@@ -303,3 +303,23 @@ input[type="range"]::-moz-range-thumb {
     background: #4CAF50; /* Color del controlador */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
+
+.item-description{
+    height: 200px;
+    overflow: auto;
+    /* display: ; */
+}
+
+#item-details{
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+}
+
+.hidden{
+    /* display: none; */
+}
+
+h3, p{
+    margin: 0;
+}
