@@ -34,8 +34,8 @@ const Nubes = [
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-6b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-31b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
-  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hd189733b.png',
-  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hat-p-12b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-19b.png', //HD189733b
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hat-p-12b.png', //HAT-P-12b
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-17b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-19b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hat-p-1b.png',
@@ -46,8 +46,8 @@ const Nubes2 = [
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-6b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-31b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-wasp-39b.png',
-  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-hd189733b.png',
-  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-hd189733b.png',
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail1-hat-p-1b.png', //HD189733b
+  '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-hd189733b.png', //HAT-P-12b
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-17b.png',
   '/ExoJumpBuild/images/ExoMaterials/Clouds/detail2-wasp-19b.png',
   'null',
