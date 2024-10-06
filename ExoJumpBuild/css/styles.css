@@ -316,6 +316,12 @@ input[type="range"]::-moz-range-thumb {
     background-color: transparent;
 }
 
+.nav::-webkit-scrollbar{
+    width: 8px; /* Width of the scrollbar */
+    background-color: transparent;
+}
+
+
 .item-description::-webkit-scrollbar-thumb{
     background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
     border-radius: 4px;

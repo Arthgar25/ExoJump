@@ -513,14 +513,27 @@ document.getElementById('speakButton').addEventListener('click', function() {
         return; // Sal de la función
     }
 
+    // Crea una cadena con todos los datos del planeta
+    const fullPlanetInfo = `
+      Description: ${planetDescriptionElement.textContent}.
+      Radius: ${planetRadius.textContent}.
+      Type: ${planetType.textContent}.
+      Discovery Method: ${discoveryMethod.textContent}.
+      Mass: ${planetMass.textContent}.
+      Discovery Date: ${discoveryDate.textContent}.
+      Orbital Radius: ${orbitalRadius.textContent}.
+      Orbital Period: ${orbitalPeriod.textContent}.
+      Eccentricity: ${eccentricity.textContent}.
+    `;
+
     // Crea una nueva instancia de SpeechSynthesisUtterance
-    currentUtterance = new SpeechSynthesisUtterance(planetDescriptions[selector]);
+    currentUtterance = new SpeechSynthesisUtterance(fullPlanetInfo);
 
     // Opcional: Configurar la voz y el volumen
     currentUtterance.voice = speechSynthesis.getVoices()[0]; // Primer voz disponible
     currentUtterance.volume = 1; // Valor entre 0 y 1
     currentUtterance.rate = 1; // Velocidad entre 0.1 y 10
-    currentUtterance.pitch = 0; // Tono entre 0 y 2
+    currentUtterance.pitch = 1; // Tono entre 0 y 2
 
     // Reproducir el texto
     speechSynthesis.speak(currentUtterance);
