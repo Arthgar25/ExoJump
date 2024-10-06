@@ -1,20 +1,28 @@
 const texts = [
     {
-        content: "In the not-so-distant future, humanity has made extraordinary technological advances, but also faces unprecedented challenges... With Earth in crisis, our only hope lies in the exploration of deep space. Scientists have detected an intriguing exoplanet: a nearby Hot Jupiter, which orbits its star at a very short distance. A world that hides secrets, but also dangers.",
-        background: "url('/ExoJumpBuild/images/Logos/gameintro.jpg')", 
+        content: "............",
+        background: "finally no use it xd", // in case we want to change it
     },
     {
-        content: "Your mission is ambitious: to travel to the nearest Hot Jupiter to Earth to gather valuable data and uncover the secrets of this strange world. Although it is uninhabitable, its dense, warm atmosphere hosts unique phenomena that could reveal new opportunities... for research and the survival of humanity.",
-        background: "url('path/to/your/background2.jpg')", 
+        content: "After years of traveling through the void of space, something appears in the distance, barely visible among the stars. Wrapped in a turbulent atmosphere, your ship shakes as you enter orbit. The sensors are failing, and the data makes no sense.",
+        background: "finally no use it xd", 
     },
     {
-        content: "However, the journey to the Hot Jupiter is fraught with dangers... You will need to demonstrate your piloting skills and destroy these obstacles to reach your destination. Each meteorite you destroy will bring you closer to your goal and allow you to collect data that could change the course of the future.",
-        background: "url('path/to/your/background3.jpg')", 
+        content: "'ALERT: Anomaly detected. Unstable orbit.'",
+        background: "finally no use it xd", 
     },
     {
-        content: "Stay calm, act swiftly, and remember: humanity is counting on you to unravel the mysteries of this intriguing Hot Jupiter...",
-        background: "url('path/to/your/background4.jpg')", 
-    }
+        content: "The ship struggles to stabilize. Everything around you feels hostile, the atmosphere denser than expected, winds almost knocking you off course. Suddenly, a flash reveals a deep blue giant within the storm.",
+        background: "finally no use it xd", 
+    },
+    {
+        content: "............",
+        background: "finally no use it xd", 
+    },
+    {
+        content: "Finally, you realize: you've arrived at the Hot Jupiter, HD189733b. But something else is watching you from the storm... What awaits you here? Only time will tell, but it may not be friendly",
+        background: "finally no use it xd", 
+    },
 ];
 
 const textContainer = document.getElementById("welcomeText");
@@ -62,6 +70,6 @@ document.body.addEventListener('click', function() {
         clearInterval(typingInterval); // Detiene la escritura actual
         showSlide();
     } else {
-        window.location.href = "game.html"; 
+        window.location.href = "backtomenugame.html"; 
     }
 });

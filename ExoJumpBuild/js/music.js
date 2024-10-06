@@ -3,7 +3,7 @@ audio.src = '/ExoJumpBuild/assets/MusicaFondo.mp3';
 audio.type = 'audio/mp3'; // Especifica que es de tipo MP3
 
 audio.loop = true;
-audio.volume = 0.5;
+audio.volume = 0.2;
 
 // Recuperar el estado de la música y la posición desde localStorage
 const musicState = localStorage.getItem('musicState');
