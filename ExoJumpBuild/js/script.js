@@ -1,4 +1,4 @@
-import * as THREE from '//unpkg.com/three/build/three.module.js';
+import * as THREE from '//unpkg.com/three/build/three.module.js'; //gola
 
 
 window.addEventListener('resize', () => {
