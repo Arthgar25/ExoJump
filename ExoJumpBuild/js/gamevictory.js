@@ -4,7 +4,7 @@ const texts = [
         background: "finally no use it xd", // in case we want to change it
     },
     {
-        content: "After days of traveling through the void of space, something appears in the distance, barely visible among the stars. Wrapped in a turbulent atmosphere, your ship shakes as you enter orbit. The sensors are failing, and the data makes no sense.",
+        content: "After years of traveling through the void of space, something appears in the distance, barely visible among the stars. Wrapped in a turbulent atmosphere, your ship shakes as you enter orbit. The sensors are failing, and the data makes no sense.",
         background: "finally no use it xd", 
     },
     {
