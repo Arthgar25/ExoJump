@@ -20,7 +20,7 @@ theInput.addEventListener("input", function(){
   ctx.fillRect(0, 0, canvas.width, canvas.height); 
 }, false);
 
-// Nuevo botón para cambiar el color de pintura
+
 var paintColorInput = document.getElementById("paintcolor");
 paintColorInput.addEventListener("input", function() {
   ctx.strokeStyle = paintColorInput.value;

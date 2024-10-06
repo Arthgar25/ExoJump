@@ -99,7 +99,7 @@ const cloudGroup = new THREE.Group();
     const ambientLight = new THREE.AmbientLight(0x404040); // Luz ambiental
     world.scene().add(ambientLight); // Agrega la luz ambiental a la escena
 
-    // Continuar con tu código...
+    
     function createAtmosphere() {
       const atmosphereGeometry = new THREE.SphereGeometry(world.getGlobeRadius() * (1 + 0.009), 75, 75);
       const atmosphereMaterial = new THREE.MeshPhongMaterial({

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'NASA';
-    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
+    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }

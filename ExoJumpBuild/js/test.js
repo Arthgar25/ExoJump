@@ -230,7 +230,7 @@ function totalPieChart(_upto, _cir_progress_id, _correct, _incorrect) {
     var _sleep = setInterval(_animateCircle, 25);
 
     function _animateCircle() {
-      //2*pi*r == 753.6 +xxx=764
+
         _input_percentage = (_upto / 100) * 764;
         _percentage = (_progress / 100) * 764;
 
@@ -257,7 +257,7 @@ function renderBriefChart(correct, total, incorrect){
  totalPieChart(percent, '_cir_progress', correct, incorrect)
    
 }
-/*** render chart for result **/
+
 function renderChart(data){
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {

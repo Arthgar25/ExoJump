@@ -1,7 +1,7 @@
 let juegoIniciado = false;
 
 function iniciarJuego() {
-    juegoIniciado = true; // Cambia el estado a verdadero a
+    juegoIniciado = true; // Cambia el estado a verdadero 
   
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -34,7 +34,7 @@ const resources = preloadImages(arr);
 
 
 var score = 0;
-//Game Lavel Design
+//lvl des
 const GameLevel = [
   {
     label: "Lavel 1",
@@ -64,7 +64,7 @@ const GameLevel = [
 var currentLevelIndex = 0;
 var currentLevel = GameLevel[currentLevelIndex];
 let gameFrame = 0;
-//Event and size config
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 window.addEventListener("resize", function () {
@@ -78,7 +78,7 @@ canvas.addEventListener("mousemove", (e) => {
   mouse.y = e.y;
 });
 
-//Defence
+//sht
 const defenceObjects = {
   MainDef: {
     name: "Main Defence",
@@ -119,9 +119,8 @@ class Defence {
     ctx.fillStyle = this.color;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    //ctx.fill();
-    //ctx.drawImage(mainDef, this.x - 80, this.y - 20);
-    let f = 0; //Fream
+    
+    let f = 0; 
     mainDef.src = this.imageDir + this.weapon.image;
     ctx.drawImage(
       mainDef,
@@ -170,7 +169,6 @@ class Copter {
       this.y -= dy / 10;
       this.moving = true;
     }
-    //shield Time
     //console.log(this.shieldTime);
     if (this.onShield) {
       this.shieldTime -= 1;
@@ -183,12 +181,6 @@ class Copter {
   }
 
   drow() {
-    //ctx.fillStyle = "white";
-
-    //ctx.beginPath();
-    //ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-
-    //ctx.fill();
     if(this.life > 0){
        ctx.drawImage(
         copterLeft,
@@ -220,7 +212,7 @@ class Copter {
     ctx.drawImage(shield, this.x - siz / 2, this.y - siz / 2, siz, siz);
   }
 }
-//void
+
 
 const copter = new Copter();
 //console.log(copter);
@@ -228,7 +220,7 @@ canvas.addEventListener("click", (e) => {
   copter.trigerDefence();
 });
 window.addEventListener("keydown", (e) => {
-  e = e || window.event; //Get event
+  e = e || window.event; 
   if (e.code == "KeyS") {
     //S key for Active shield
     if (!copter.onShield) {
@@ -256,7 +248,7 @@ function handleCopter() {
   //console.log(copter.life);
 }
 
-// Enemis
+// Enemi
 const enemyObjects = [
   { name: "Astroyed", damageCapability: 10, image: "yYthptPx/ast1.png", score: 2 },
   { name: "Fire Astroyed", damageCapability: 20, image: "D0msBP41/ast2.png", score: 4 },
@@ -280,7 +272,7 @@ class Enemy {
     this.distance;
     this.imageDir = "https://i.postimg.cc/";
     this.type = enemyObjects[Math.floor(Math.random() * enemyObjects.length)];
-    //this.img =this.imageDir + this.images[Math.floor(Math.random() * this.images.length)];
+    
     this.img = this.imageDir + this.type.image;
     this.frameX = 0;
     this.spriteWidth = 50;
@@ -298,12 +290,7 @@ class Enemy {
     //console.log(this.distance);
   }
   draw() {
-    /*ctx.fillStyle = "blue";
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.stroke();
-    */
+
     enemy.src = this.img;
     ctx.drawImage(
       enemy,
@@ -341,7 +328,7 @@ function handleEnemy() {
       if (enemyArray[i].distance < enemyArray[i].radius + copter.size) {
         //console.log("Hited the Copter");
         if (!enemyArray[i].hited) {
-          //Damage Copter Life
+          //Dmg cop life
           if (enemyArray[i].type.name == "Shield" && copter.shieldCount < 3) {
             copter.shieldCount++;
           }
@@ -418,7 +405,7 @@ function PlayerInfo() {
   ctx.beginPath();
   ctx.moveTo(startPoint, canvas.height - 20);
   ctx.lineWidth = 15;
-  //ctx.lineCap = "round";
+
   ctx.lineTo(endPoint, canvas.height - 20);
   ctx.stroke();
 
@@ -430,8 +417,6 @@ function PlayerInfo() {
   //Life
 
   ctx.font = "60px Verdana";
-  // Create gradient
-  // Fill with gradient
   ctx.fillStyle = 'white';
   ctx.fillText(score, 10, 70);
   if (score > 25) {
@@ -440,13 +425,11 @@ function PlayerInfo() {
     score = 0;
   }
 
-  ctx.font = "40px Verdana"; // Ajusta el tamaño de fuente según sea necesario
+  ctx.font = "40px Verdana"; 
   ctx.fillText("Level " + (currentLevelIndex + 1), canvas.width - 200, 70);
 }
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  //ctx.fillStyle='rgba(0,0,0,.5)';
-  //ctx.fillRect(0,0,canvas.width,canvas.height);
   if(!gameOver){
     handleCopter();
     handleEnemy();
@@ -481,5 +464,5 @@ document.getElementById('startButton').onclick = function() {
 
 // Evento para el botón de salir
 document.getElementById('exitButton').onclick = function() {
-  window.location.href = "index.html"; // Redirigir a otra página
+  window.location.href = "index.html"; 
 };

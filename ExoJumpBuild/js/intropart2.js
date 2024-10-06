@@ -23,8 +23,7 @@ let l_velocity_Array = linesGeometry.getAttribute("velocity").array;
 init();
 animate();
 
-// Nueva variable para controlar la velocidad de escritura del texto
- // Ajusta esta variable para cambiar la velocidad del texto
+
 
 function init() {
     scene = new THREE.Scene();
@@ -171,7 +170,7 @@ function init() {
 
     // Botón que redirige al hacer clic
     document.body.addEventListener('click', function() {
-        window.location.href = "index.html"; // Cambia "tu_archivo.html" por el nombre de tu archivo HTML
+        window.location.href = "index.html"; 
     });
 }
 

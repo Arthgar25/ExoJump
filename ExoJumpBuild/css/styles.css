@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'NASA';
-    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
+    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }
@@ -125,7 +125,7 @@ h1{
     width: 100vw;
     height: 100vh;
     padding: 0;
-    overflow: hidden; /* Asegúrate de que no se desborde */
+    overflow: hidden; /* para que no se desborde */
 }
 
 .scene-container{
@@ -150,7 +150,7 @@ h1{
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 250px;
-    height: 100vh; /* Asegura que ocupe toda la altura */
+    height: 100vh; /* Asegurarse que ocupe toda la altura */
     overflow: auto; /* Para permitir desplazarse solo dentro de la nav */
     display: flex;
     flex-direction: column;
@@ -233,7 +233,7 @@ list__img{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 400px;
     height: 100vh;
-    z-index: 10; /* Ajusta el tamaño según lo necesites */
+    z-index: 10; 
     overflow: auto;
 }
 .col_inter {
@@ -274,7 +274,7 @@ list__img{
 .rotacion {
     margin-bottom: 10px; /* Espaciado entre la etiqueta y la barra */
     font-size: 14px;
-     /* Tamaño de la fuente de la etiqueta */
+     
 }
 
 input[type="range"] {

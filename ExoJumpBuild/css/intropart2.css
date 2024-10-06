@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'NASA';
-    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
+    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }
@@ -12,7 +12,7 @@ body {
     height: 100vh;
     background-image: url("https://user-images.githubusercontent.com/26748614/96337412-581f2e80-1087-11eb-90f3-f033a8a1b41e.jpg");
     background-size: cover;
-    font-family: 'NASA'; /* Establecer la fuente aquí */
+    font-family: 'NASA'; 
 }
 
 canvas {
@@ -22,7 +22,7 @@ canvas {
 #canvas_container {
     width: 100%;
     height: 100vh;
-    position: absolute; /* Asegurarse de que esté en la parte superior */
+    position: absolute; 
     top: 0;
     left: 0;
 }
