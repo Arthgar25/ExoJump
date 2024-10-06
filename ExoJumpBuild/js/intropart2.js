@@ -24,7 +24,7 @@ init();
 animate();
 
 // Nueva variable para controlar la velocidad de escritura del texto
-const typingSpeed = 40; // Ajusta esta variable para cambiar la velocidad del texto
+ // Ajusta esta variable para cambiar la velocidad del texto
 
 function init() {
     scene = new THREE.Scene();
@@ -116,7 +116,8 @@ function init() {
     linesGeometry.getAttribute("position").setUsage(THREE.DynamicDrawUsage);
     scene.add(lines);
 
-    // Código para la animación del texto de bienvenida
+
+    
     const welcomeText = "Welcome, explorer! In this app, you will embark on an exciting journey through the universe of exoplanets. Discover distant worlds, learn about the latest NASA research, and be amazed by fascinating facts. Get ready to unveil the most astonishing secrets of the cosmos while having fun and expanding your knowledge. Onward, the space adventure awaits!";
     const textContainer = document.createElement("div");
     textContainer.style.position = "absolute";
@@ -130,6 +131,7 @@ function init() {
     textContainer.style.pointerEvents = "none"; // Evita que los eventos del mouse afecten al texto
     document.body.appendChild(textContainer);
 
+    const typingSpeed = 40;
     let index = 0;
 
     function typeText() {
