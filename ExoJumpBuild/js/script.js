@@ -101,7 +101,7 @@ const cloudGroup = new THREE.Group();
 
     // Continuar con tu código...
     function createAtmosphere() {
-      const atmosphereGeometry = new THREE.SphereGeometry(world.getGlobeRadius() * (1 + 0.008), 75, 75);
+      const atmosphereGeometry = new THREE.SphereGeometry(world.getGlobeRadius() * (1 + 0.009), 75, 75);
       const atmosphereMaterial = new THREE.MeshPhongMaterial({
         color: atmosfera[selector],
         transparent: true,
