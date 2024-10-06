@@ -1,7 +1,7 @@
 let juegoIniciado = false;
 
 function iniciarJuego() {
-    juegoIniciado = true; // Cambia el estado a verdadero
+    juegoIniciado = true; // Cambia el estado a verdadero a
   
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
