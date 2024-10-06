@@ -51,7 +51,7 @@
     font-weight: 400;
     border: 0;
     padding: 0.125rem 0.625rem;
-    border-radius: 30px;
+    border-radius: 6px;
     width: 100px;
     margin-top: 0.25rem;
     cursor: pointer;
@@ -67,8 +67,30 @@
 }
 
 .botones-grandes{
-    padding: 0rem, .1rem;
-    width: 150px;
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    color:black;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    border: 0;
+    padding: 0.125rem 0.625rem;
+    border-radius: 6px;
+    width: 100px;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    transition: color .2s ease;
+    transition: background-color .2s ease;
+}
+
+.botones-grandes:hover{
+    background-color: #5c5c5c;
+    color: #ffffff;
+    
+
 }
 
 .rotacion{
@@ -240,4 +262,44 @@ list__img{
     margin-bottom: 100px;
     color: #ffffffcc;
     display: flex;
+}
+
+.speed-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Espaciado alrededor del control */
+}
+
+.rotacion {
+    margin-bottom: 10px; /* Espaciado entre la etiqueta y la barra */
+    font-size: 14px;
+     /* Tamaño de la fuente de la etiqueta */
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Para quitar el estilo por defecto en navegadores WebKit */
+    width: 80%; /* Ancho completo */
+    height: 10px; /* Altura de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    background: #ddd; /* Color de fondo de la barra */
+    outline: none; /* Sin borde de enfoque */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Para quitar el estilo por defecto en navegadores WebKit */
+    appearance: none; /* Para navegadores modernos */
+    width: 20px; /* Ancho del controlador */
+    height: 20px; /* Altura del controlador */
+    border-radius: 50%; /* Controlador circular */
+    background: #757575; /* Color del controlador */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 10px; /* Ancho del controlador */
+    height: 20px; /* Altura del controlador */
+    border-radius: 50%; /* Controlador circular */
+    background: #4CAF50; /* Color del controlador */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
 }

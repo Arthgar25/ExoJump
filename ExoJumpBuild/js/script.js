@@ -212,15 +212,15 @@ document.getElementById('HD209458b').addEventListener('click', () => updatePlane
 
 // Array de descripciones de los planetas
 const planetDescriptions = [
-  "This exoplanet is scorching hot and has a dense atmosphere filled with tiny particles and scattered clouds. Despite having only about one-third of Jupiter's mass, its radius is nearly the same, making it unusually large for its weight. The thick atmosphere might play a role in its size, trapping heat and gases, which keeps the planet puffed up. Scientists are intrigued by this strange combination of light mass and large size, making it a unique world to study.",
-  'A giant gas planet with bright clouds that reflect a lot of light. It is larger than our sun.',
-  'This exoplanet was the first one ever studied by the powerful James Webb Space Telescope! Its atmosphere is like a swirling fog, making it mysterious and hard to see clearly. The blue color comes from its special gases that reflect starlight in a unique way. Scientists are fascinated by it because they think its hazy atmosphere might hold clues about what these distant worlds are really like.',
-  'HD189733b: Un planeta con tormentas intensas y nubes grises densas.',
-  'HAT-P-12b: Tiene una atmósfera densa y oscura, lo que lo hace muy difícil de observar directamente.',
-  'WASP-17b: Uno de los exoplanetas más grandes, con una atmósfera tenue y clara.',
-  'WASP-19b: Planeta caliente con una atmósfera turbulenta y cálida.',
-  'HAT-P-1b: Tiene una atmósfera fría y difusa que dispersa la luz de forma tenue.',
-  'HD209458b: Uno de los primeros exoplanetas descubiertos, con una atmósfera clara y azulada.'
+  "WASP-6b is scorching hot and has a dense atmosphere filled with tiny particles and scattered clouds. Despite having only about one-third of Jupiter's mass, its radius is nearly the same, making it unusually large for its weight. The thick atmosphere might play a role in its size, trapping heat and gases, which keeps the planet puffed up. Scientists are intrigued by this strange combination of light mass and large size, making it a unique world to study.",
+  'WASP-31b is a massive gas planet, even larger than our Sun! Its bright clouds reflect a lot of light, making it one of the most reflective planets we know of. These clouds are made up of special particles that scatter starlight, giving the planet a glowing appearance. Being such a giant, it’s a fascinating target for scientists trying to understand how these distant, gas-filled worlds form and evolve.',
+  'WASP-39b was the first one ever studied by the powerful James Webb Space Telescope! Its atmosphere is like a swirling fog, making it mysterious and hard to see clearly. The blue color comes from its special gases that reflect starlight in a unique way. Scientists are fascinated by it because they think its hazy atmosphere might hold clues about what these distant worlds are really like.',
+  "HD 189733b is a wild planet with powerful storms and thick, gray clouds. But what makes it really amazing is its weather—it rains glass! Winds on this planet blow at incredible speeds, making tiny glass particles whip through the air like a storm of sharp crystals. It's a dangerous and extreme world, very different from anything we see on Earth!",
+  "HAT-P-12b is a mysterious planet with a thick, dark atmosphere, making it really hard to see directly. Its atmosphere blocks out most of the light, keeping it hidden from view. What’s really cool is that its official name, 'Puli,' comes from a breed of Hungarian dogs! Scientists are still working to uncover the secrets of this shadowy world, but its dense atmosphere makes it a real challenge to study.",
+  'WASP-17b is one of the largest exoplanets ever discovered! Its atmosphere is thin and clear, letting lots of light pass through. But here’s something really cool—this planet orbits its star backwards! Most planets orbit in the same direction that their star spins, but WASP-17b moves the other way, making it a rare and fascinating world for scientists to study.',
+  'WASP-19b is a blazing hot planet with a turbulent, swirling atmosphere. What’s incredible is how fast it moves—it takes less than a single day to orbit around its star! Imagine a year flying by in just 18 hours. Its close orbit to the star makes it superheated, creating wild storms in its thick atmosphere. This makes WASP-19b a fast and furious world that scientists love to explore.',
+  'HAT-P-1b has a cold and diffuse atmosphere that scatters light in a soft, gentle way, giving it a faint glow. But here’s something curious—this planet is much puffier than expected! Even though it’s about the size of Jupiter, it’s surprisingly lightweight, almost like a big balloon floating in space. Scientists are still trying to figure out why it’s so puffed up, making it a mystery in the galaxy.',
+  'HD 209458b is one of the first exoplanets ever discovered, and it has a clear, bluish atmosphere. But here’s an amazing detail—it’s one of the few planets where scientists have actually observed its atmosphere escaping into space! The intense heat from its nearby star is causing gases to stream off the planet like a long tail, almost like a comet. This makes HD 209458b a trailblazer in exoplanet studies and a true wonder to explore!'
 ];
 
 // Selecciona el elemento para la descripción
@@ -241,3 +241,34 @@ document.getElementById('WASP-17b').addEventListener('click', () => updatePlanet
 document.getElementById('WASP-19b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[6]));
 document.getElementById('HAT-P-1b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[7]));
 document.getElementById('HD209458b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[8]));
+
+
+let isSpeaking = false; // Variable para rastrear el estado del discurso
+let currentUtterance; // Variable para almacenar la instancia actual de SpeechSynthesisUtterance
+
+document.getElementById('speakButton').addEventListener('click', function() {
+    // Si ya está hablando, detén la reproducción
+    if (isSpeaking) {
+        speechSynthesis.cancel(); // Detiene cualquier discurso en reproducción
+        isSpeaking = false; // Actualiza el estado
+        return; // Sal de la función
+    }
+
+    // Crea una nueva instancia de SpeechSynthesisUtterance
+    currentUtterance = new SpeechSynthesisUtterance(planetDescriptions[selector]);
+
+    // Opcional: Configurar la voz y el volumen
+    currentUtterance.voice = speechSynthesis.getVoices()[0]; // Primer voz disponible
+    currentUtterance.volume = 1; // Valor entre 0 y 1
+    currentUtterance.rate = 1; // Velocidad entre 0.1 y 10
+    currentUtterance.pitch = 0; // Tono entre 0 y 2
+
+    // Reproducir el texto
+    speechSynthesis.speak(currentUtterance);
+    isSpeaking = true; // Actualiza el estado
+
+    // Evento para cambiar el estado cuando termine el discurso
+    currentUtterance.onend = function() {
+        isSpeaking = false; // Actualiza el estado cuando termina
+    };
+});
