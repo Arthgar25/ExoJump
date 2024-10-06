@@ -7,5 +7,5 @@ document.getElementById('try-again').addEventListener('click', function() {
 document.getElementById('back-to-menu').addEventListener('click', function() {
     console.log('Back to Main Menu clicked');
     // Aquí puedes redirigir a la página principal
-    window.location.href = 'game.html'; // Cambia la URL a la página principal
+    window.location.href = 'index.html'; // Cambia la URL a la página principal
 });
