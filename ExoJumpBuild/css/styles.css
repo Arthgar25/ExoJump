@@ -307,7 +307,22 @@ input[type="range"]::-moz-range-thumb {
 .item-description{
     height: 200px;
     overflow: auto;
+
     /* display: ; */
+}
+
+.item-description::-webkit-scrollbar{
+    width: 8px; /* Width of the scrollbar */
+    background-color: transparent;
+}
+
+.item-description::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+    border-radius: 4px;
+}
+
+.item-description::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #item-details{
@@ -322,4 +337,8 @@ input[type="range"]::-moz-range-thumb {
 
 h3, p{
     margin: 0;
+}
+h3{
+    
+    font-weight: 400;
 }

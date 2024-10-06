@@ -243,24 +243,263 @@ const planetDescriptions = [
   'HD 209458b is one of the first exoplanets ever discovered, and it has a clear, bluish atmosphere. But here’s an amazing detail—it’s one of the few planets where scientists have actually observed its atmosphere escaping into space! The intense heat from its nearby star is causing gases to stream off the planet like a long tail, almost like a comet. This makes HD 209458b a trailblazer in exoplanet studies and a true wonder to explore!'
 ];
 
+const planetRadiusArr = [
+  "1.03x Jupiters",
+  "1.549x Jupiters",
+  "1.27x Jupiters",
+  "1.13x Jupiters",
+  "0.959x Jupiters",
+  "1.87x Jupiters",
+  "1.415x Jupiters",
+  "1.319x Jupiters",
+  "1.39x Jupiters"
+];
+
+const planetTypeArr = [
+  "Gas Giant",
+  "Gas Giant",
+  "Gas Giant",
+  "Gas Giant",
+  "Gas Giant",
+  "Gas Giant",
+  "Gas Giant",
+  "Gas Giant",
+];
+
+const discoveryMethodArr = [
+  "Transit",
+  "Transit",
+  "Transit",
+  "Radial Velocity",
+  "Transit",
+  "Transit",
+  "Transit",
+  "Radial Velocity",
+  "Radial Velocity",
+];
+
+const planetMassArr = [
+  "0.37 Jupiters",
+  "0.478 Jupiters",
+  "0.28 Jupiters",
+  "1.13 Jupiters",
+  "0.211 Jupiters",
+  "0.78 Jupiters",
+  "1.154 Jupiters",
+  "0.73 Jupiters",
+  "0.73 Jupiters"
+];
+
+const discoveryDateArr = [
+  "2009",
+  "2010",
+  "2011",
+  "2005",
+  "2009",
+  "2009",
+  "2009",
+  "2006",
+  "1999"
+];
+
+const orbitalRadiusArr = [
+  "0.04217 AU",
+  "0.04659 AU",
+  "0.0486 AU",
+  "0.03126 AU",
+  "0.0384 AU",
+  "0.0515 AU",
+  "0.01652 AU",
+  "0.05561 AU",
+  "0.04707 AU"
+];
+
+const orbitalPeriodArr = [
+  "3.4 days",
+  "3.4 days",
+  "4.1 days",
+  "2.2 days",
+  "3.2 days",
+  "0.8 days",
+  "0.8 days",
+  "4.5 days",
+  "3.5 days"
+];
+const eccentricityArr = [
+  "0.05",
+  "0.0",
+  "0.0",
+  "0.0",
+  "0.0",
+  "0.01",
+  "0.01",
+  "0.0",
+  "0.0"
+];
+
+
 // Selecciona el elemento para la descripción
 const planetDescriptionElement = document.querySelector('.informacion p');
+
+const planetRadius = document.querySelector('#planet-radius p');
+const planetType = document.querySelector('#planet-type p');
+const discoveryMethod = document.querySelector('#discovery-method p');
+const planetMass = document.querySelector('#planet-mass p');
+const discoveryDate = document.querySelector('#discovery-date p');
+const orbitalRadius = document.querySelector('#orbital-radius p');
+const orbitalPeriod = document.querySelector('#orbital-period p');
+const eccentricity = document.querySelector('#eccentricity p');
+
+
+ 
 
 // Función para actualizar la descripción del planeta
 function updatePlanetDescription(description) {
   planetDescriptionElement.textContent = description; // Cambia el texto de la descripción
 }
 
+function updatePlanetRadius(text){
+  planetRadius.textContent = text;
+}
+
+function updatePlanetType(text){
+  planetType.textContent = text;
+}
+
+function updateDiscoveryMethod(text){
+  discoveryMethod.textContent = text;
+}
+
+function updatePlanetMass(text){
+  planetMass.textContent = text;
+}
+
+function updateDiscoveryDate(text){
+  discoveryDate.textContent = text;
+}
+
+function updateOrbitalRadius(text){
+  orbitalRadius.textContent = text;
+}
+
+function updateOrbitalPeriod(text){
+  orbitalPeriod.textContent = text;
+}
+
+function updateEccentricity(text){
+  eccentricity.textContent = text;
+}
+
+
+
 // Añade eventos a los botones de planetas para cambiar la descripción
-document.getElementById('WASP-6b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[0]));
-document.getElementById('WASP-31b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[1]));
-document.getElementById('WASP-39b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[2]));
-document.getElementById('HD189733b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[3]));
-document.getElementById('HAT-P-12b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[4]));
-document.getElementById('WASP-17b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[5]));
-document.getElementById('WASP-19b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[6]));
-document.getElementById('HAT-P-1b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[7]));
-document.getElementById('HD209458b').addEventListener('click', () => updatePlanetDescription(planetDescriptions[8]));
+document.getElementById('WASP-6b').addEventListener('click',    () => {
+  updatePlanetDescription(planetDescriptions[0]),
+  updatePlanetRadius(planetRadiusArr[0]),
+  updatePlanetType(planetTypeArr[0]),
+  updateDiscoveryMethod(discoveryMethodArr[0]),
+  updatePlanetMass(planetMassArr[0]),
+  updateDiscoveryDate(discoveryDateArr[0]),
+  updateOrbitalRadius(orbitalRadiusArr[0]),
+  updateOrbitalPeriod(orbitalPeriodArr[0]),
+  updateEccentricity(eccentricityArr[0])
+});
+
+document.getElementById('WASP-31b').addEventListener('click',   () => {
+  updatePlanetDescription(planetDescriptions[1]);
+  updatePlanetRadius(planetRadiusArr[1]);
+  updatePlanetType(planetTypeArr[1]);
+  updateDiscoveryMethod(discoveryMethodArr[1]);
+  updatePlanetMass(planetMassArr[1]);
+  updateDiscoveryDate(discoveryDateArr[1]);
+  updateOrbitalRadius(orbitalRadiusArr[1]);
+  updateOrbitalPeriod(orbitalPeriodArr[1]);
+  updateEccentricity(eccentricityArr[1]);
+});
+
+document.getElementById('WASP-39b').addEventListener('click',   () => {
+  updatePlanetDescription(planetDescriptions[2]);
+  updatePlanetRadius(planetRadiusArr[2]);
+  updatePlanetType(planetTypeArr[2]);
+  updateDiscoveryMethod(discoveryMethodArr[2]);
+  updatePlanetMass(planetMassArr[2]);
+  updateDiscoveryDate(discoveryDateArr[2]);
+  updateOrbitalRadius(orbitalRadiusArr[2]);
+  updateOrbitalPeriod(orbitalPeriodArr[2]);
+  updateEccentricity(eccentricityArr[2])
+});
+
+document.getElementById('HD189733b').addEventListener('click',  () => {
+  updatePlanetDescription(planetDescriptions[3]);
+  updatePlanetRadius(planetRadiusArr[3]);
+  updatePlanetType(planetTypeArr[3]);
+  updateDiscoveryMethod(discoveryMethodArr[3]);
+  updatePlanetMass(planetMassArr[3]);
+  updateDiscoveryDate(discoveryDateArr[3]);
+  updateOrbitalRadius(orbitalRadiusArr[3]);
+  updateOrbitalPeriod(orbitalPeriodArr[3]);
+  updateEccentricity(eccentricityArr[3]);
+});
+
+document.getElementById('HAT-P-12b').addEventListener('click',  () => {
+  updatePlanetDescription(planetDescriptions[4]);
+  updatePlanetRadius(planetRadiusArr[4]);
+  updatePlanetType(planetTypeArr[4]);
+  updateDiscoveryMethod(discoveryMethodArr[4]);
+  updatePlanetMass(planetMassArr[4]);
+  updateDiscoveryDate(discoveryDateArr[4]);
+  updateOrbitalRadius(orbitalRadiusArr[4]);
+  updateOrbitalPeriod(orbitalPeriodArr[4]);
+  updateEccentricity(eccentricityArr[4]);
+});
+
+document.getElementById('WASP-17b').addEventListener('click',   () => {
+  updatePlanetDescription(planetDescriptions[5]);
+  updatePlanetRadius(planetRadiusArr[5]);
+  updatePlanetType(planetTypeArr[5]);
+  updateDiscoveryMethod(discoveryMethodArr[5]);
+  updatePlanetMass(planetMassArr[5]);
+  updateDiscoveryDate(discoveryDateArr[5]);
+  updateOrbitalRadius(orbitalRadiusArr[5]);
+  updateOrbitalPeriod(orbitalPeriodArr[5]);
+  updateEccentricity(eccentricityArr[5]);
+});
+
+document.getElementById('WASP-19b').addEventListener('click',   () => {
+  updatePlanetDescription(planetDescriptions[6]);
+  updatePlanetRadius(planetRadiusArr[6]);
+  updatePlanetType(planetTypeArr[6]);
+  updateDiscoveryMethod(discoveryMethodArr[6]);
+  updatePlanetMass(planetMassArr[6]);
+  updateDiscoveryDate(discoveryDateArr[6]);
+  updateOrbitalRadius(orbitalRadiusArr[6]);
+  updateOrbitalPeriod(orbitalPeriodArr[6]);
+  updateEccentricity(eccentricityArr[6]);
+});
+
+document.getElementById('HAT-P-1b').addEventListener('click',   () => {
+  updatePlanetDescription(planetDescriptions[7]);
+  updatePlanetRadius(planetRadiusArr[7]);
+  updatePlanetType(planetTypeArr[7]);
+  updateDiscoveryMethod(discoveryMethodArr[7]);
+  updatePlanetMass(planetMassArr[7]);
+  updateDiscoveryDate(discoveryDateArr[7]);
+  updateOrbitalRadius(orbitalRadiusArr[7]);
+  updateOrbitalPeriod(orbitalPeriodArr[7]);
+  updateEccentricity(eccentricityArr[7]);
+});
+
+document.getElementById('HD209458b').addEventListener('click',  () => {
+  updatePlanetDescription(planetDescriptions[8]);
+  updatePlanetRadius(planetRadiusArr[8]);
+  updatePlanetType(planetTypeArr[8]);
+  updateDiscoveryMethod(discoveryMethodArr[8]);
+  updatePlanetMass(planetMassArr[8]);
+  updateDiscoveryDate(discoveryDateArr[8]);
+  updateOrbitalRadius(orbitalRadiusArr[8]);
+  updateOrbitalPeriod(orbitalPeriodArr[8]);
+  updateEccentricity(eccentricityArr[8]);
+});
 
 
 let isSpeaking = false; // Variable para rastrear el estado del discurso
